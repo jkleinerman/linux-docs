@@ -30,48 +30,36 @@ Call wifi-menu wizard
 Partition and format your hard disk drive
 -----------------------------------------
 
+Create the gpt using parted. (Windows need it)
+
+.. code-block::
+
+  (parted) mklabel
+           gpt
+ 
+Now partition the disk using fdisk. (It is easier)
+ 
 .. code-block::
 
   # fdisk /dev/sda
-
   
-  
+- Create an EFI partition
+- Create the root partition
+- Create the swap partiotion
+- Create the Windows partition
 
-  
-
-Create the following file **/etc/wpa_supplicant/wpa_supplicant-wlan0.conf** assuming the previous command outputs **wlan0** as interface name with the following content:
+Create the filesystem on partitions for the EFI partition, root partition and swap.
 
 .. code-block::
 
-  ctrl_interface=/run/wpa_supplicant
-  update_config=1
-
-Now start wpa_supplicant with:
-
-.. code-block::
-
-  # wpa_supplicant -B -i wlan0 -c /etc/wpa_supplicant/wpa_supplicant-wlan0.conf
+  # mkfs.fat -F32 /dev/sda1
+  # mkfs.ext4 /dev/sda2
+  # mkswap /dev/sda3
   
-At this point run:
+Activate the swap partition:
 
 .. code-block::
 
-  # wpa_cli -i wlan0
-
-This will present an interactive prompt (>), which has tab completion and descriptions of completed commands.
+  swapon /dev/sda3
 
 
-Use the **scan** and **scan_results** commands to see the available networks:
-
-.. code-block::
-
-  > scan
-  OK
-  <3>CTRL-EVENT-SCAN-RESULTS
-
-  > scan_results
-  bssid / frequency / signal level / flags / ssid
-  00:00:00:00:00:00 2462 -49 [WPA2-PSK-CCMP][ESS] MYSSID
-  11:11:11:11:11:11 2437 -64 [WPA2-PSK-CCMP][ESS] ANOTHERSSID
- 
-To associate with MYSSID, add the network, set the credentials and enable it:
