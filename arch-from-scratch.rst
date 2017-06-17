@@ -30,8 +30,9 @@ Call wifi-menu wizard
 Partition and format your hard disk drive
 -----------------------------------------
 
+.. code-block::
 
-  
+  # fdisk /dev/sda
 
   
   
