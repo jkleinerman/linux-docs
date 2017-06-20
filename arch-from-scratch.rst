@@ -60,6 +60,43 @@ Activate the swap partition:
 
 .. code-block::
 
-  swapon /dev/sda3
+  # swapon /dev/sda3
+
+
+Mount the partition that would be used for root filesystem in /mnt:
+
+.. code-block::
+
+  # mount /dev/sda2 /mnt
+
+
+Install the base packages:
+
+.. code-block::
+
+  # pacstrap /mnt base
+
+
+Mount the EFI partition in /mnt/boot/efi:
+
+.. code-block::
+
+  # mkdir -p /mnt/boot/efi
+  # mount /dev/sda1 /mnt/boot/efi
+
+
+Generate the fstab file and check the resulting file:
+
+.. code-block::
+
+  # genfstab -U /mnt > /mnt/etc/fstab
+ 
+  
+Change root into the new system:
+
+.. code-block::
+
+  # arch-chroot /mnt
+
 
 
