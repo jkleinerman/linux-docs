@@ -97,6 +97,51 @@ Change root into the new system:
 .. code-block::
 
   # arch-chroot /mnt
+  
+
+Set the time zone:
+
+.. code-block::
+
+  # ln -sf /usr/share/zoneinfo/Region/City /etc/localtime
+  
+
+Run hwclock to generate /etc/adjtime:
+
+.. code-block::
+
+  # hwclock --systohc
+  
+  
+Uncomment en_US.UTF-8 UTF-8 and es_AR.UTF-8 UTF-8 and other needed localizations in /etc/locale.gen, and generate them with:
+
+.. code-block::
+
+  # locale-gen
+  
+Set the LANG variable in /etc/locale.conf accordingly, for example:
+
+.. code-block::
+
+  LANG=en_US.UTF-8
+  
+Create the /etc/hostname file:
+
+.. code-block::
+
+  myhostname
+
+Consider adding a matching entry to /etc/hosts:
+
+.. code-block::
+
+  127.0.0.1	localhost.localdomain	localhost
+  ::1		localhost.localdomain	localhost
+  127.0.1.1	myhostname.localdomain	myhostname
+  
+  
+  
+  
 
 
 
