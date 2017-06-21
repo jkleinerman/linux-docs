@@ -119,7 +119,7 @@ Uncomment en_US.UTF-8 UTF-8 and es_AR.UTF-8 UTF-8 and other needed localizations
 
   # locale-gen
   
-Set the LANG variable in /etc/locale.conf accordingly, for example:
+Set the LANG variable in ``/etc/locale.conf`` accordingly, for example:
 
 .. code-block::
 
@@ -155,6 +155,25 @@ Install **GRUB**:
   # pacman -S grub efibootmgr os-prober
   # grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=arch_grub
   # grub-mkconfig -o /boot/grub/grub.cfg
+  
+  
+Install wpa_supplicant package to be able to configure the wifi adapter when machine is rebooted:
+
+.. code-block::
+
+  # pacman -S wpa_supplicant
+
+  
+Reboot the system:
+
+.. code-block::
+
+  # exit
+  # umount -R /mnt
+  # reboot
+
+
+Configure wpa_supplicant and systemd-networkd to connect to internet:
 
 
 
