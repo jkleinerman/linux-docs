@@ -63,6 +63,10 @@ Activate the swap partition:
   # swapon /dev/sda3
 
 
+Install the base packages in your hard drive
+--------------------------------------------
+
+
 Mount the partition that would be used for root filesystem in /mnt:
 
 .. code-block::
@@ -91,7 +95,11 @@ Generate the fstab file and check the resulting file:
 
   # genfstab -U /mnt > /mnt/etc/fstab
  
-  
+
+Configure time zone, clock, locale varaibles and hostname
+---------------------------------------------------------
+
+
 Change root into the new system:
 
 .. code-block::
@@ -147,8 +155,11 @@ Set the root password:
 
   # passwd
   
-  
-Install **GRUB**:
+
+Installation of **GRUB** bootloader:
+------------------------------------
+
+Assuming you have an EFI motherboard, install grub in the following way:
 
 .. code-block::
 
@@ -157,24 +168,17 @@ Install **GRUB**:
   # grub-mkconfig -o /boot/grub/grub.cfg
   
   
-Install wpa_supplicant package to be able to configure the wifi adapter when machine is rebooted:
-
-.. code-block::
-
-  # pacman -S wpa_supplicant
-
-  
-Reboot the system:
-
-.. code-block::
-
-  # exit
-  # umount -R /mnt
-  # reboot
-
 
 Configure wpa_supplicant and systemd-networkd to connect to internet
 --------------------------------------------------------------------
+
+Install the following packages
+
+.. code-block::
+
+  # pacman -S wpa_supplicant iw
+
+
 
 Configure wpa_supplicant
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -284,7 +288,18 @@ Create the following file ``/etc/systemd/network/wlan0.network`` assuming your i
   Address=10.10.7.71/24
   
 
-Restart 
+
+
+Reboot the system to start the base system
+------------------------------------------
+
+.. code-block::
+
+  # exit
+  # umount -R /mnt
+  # reboot
+
+
 
 
 
