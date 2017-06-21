@@ -67,7 +67,7 @@ Install the base packages in your hard drive
 --------------------------------------------
 
 
-Mount the partition that would be used for root filesystem in /mnt:
+Mount the partition that would be used for root filesystem in ``/mnt``:
 
 .. code-block::
 
@@ -81,7 +81,7 @@ Install the base packages:
   # pacstrap /mnt base
 
 
-Mount the EFI partition in /mnt/boot/efi:
+Mount the EFI partition in ``/mnt/boot/efi``:
 
 .. code-block::
 
@@ -121,7 +121,7 @@ Run hwclock to generate /etc/adjtime:
   # hwclock --systohc
   
   
-Uncomment en_US.UTF-8 UTF-8 and es_AR.UTF-8 UTF-8 and other needed localizations in /etc/locale.gen, and generate them with:
+Uncomment ``en_US.UTF-8 UTF-8`` and ``es_AR.UTF-8 UTF-8`` and other needed localizations in ``/etc/locale.gen``, and generate them with:
 
 .. code-block::
 
@@ -189,7 +189,7 @@ Check the name of the wifi adapter you are going to use with the following comma
 
   # ip link ls
 
-Create the following file ``/etc/wpa_supplicant/wpa_supplicant-wlan0.conf`` assuming the previous command outputs **wlan0** as interface name with the following content:
+Create the following file ``/etc/wpa_supplicant/wpa_supplicant-wlp2s0.conf`` assuming the previous command outputs **wlp2s0** as interface name with the following content:
 
 .. code-block::
 
@@ -200,13 +200,13 @@ Now start wpa_supplicant with:
 
 .. code-block::
 
-  # wpa_supplicant -B -i wlan0 -c /etc/wpa_supplicant/wpa_supplicant-wlan0.conf
+  # wpa_supplicant -B -i wlan0 -c /etc/wpa_supplicant/wpa_supplicant-wlp2s0.conf
   
 At this point run:
 
 .. code-block::
 
-  # wpa_cli -i wlan0
+  # wpa_cli -i wlp2s0
 
 This will present an interactive prompt (>), which has tab completion and descriptions of completed commands.
 
@@ -268,16 +268,16 @@ Start it using the following command:
 
 .. code-block::
 
-  # systemctl start wpa_supplicant@wlan0
+  # systemctl start wpa_supplicant@wlp2s0
   
-wpa_supplicant@.service - accepts the interface name as an argument and starts the wpa_supplicant daemon for this interface. It reads a ``/etc/wpa_supplicant/wpa_supplicant-interface.conf`` configuration file. For this reason the file in ``/etc/wpa_supplicant`` was named ``wpa_supplicant-wlan0.conf``
+wpa_supplicant@.service - accepts the interface name as an argument and starts the wpa_supplicant daemon for this interface. It reads a ``/etc/wpa_supplicant/wpa_supplicant-interfacename.conf`` configuration file. For this reason the file in ``/etc/wpa_supplicant`` was named ``wpa_supplicant-wlp2s0.conf``
 
 
 
 Setting the IP address trough systemd-networkd
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Create the following file ``/etc/systemd/network/wlan0.network`` assuming your interface is **wlan0**:
+Create the following file ``/etc/systemd/network/wlp2s0.network`` assuming your interface is **wlp2s0**:
 
 .. code-block::
 
