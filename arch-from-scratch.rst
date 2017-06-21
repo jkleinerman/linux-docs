@@ -141,7 +141,20 @@ Consider adding a matching entry to /etc/hosts:
   
   
   
+Set the root password:
+
+.. code-block::
+
+  # passwd
   
+  
+Install **GRUB**:
+
+.. code-block::
+
+  # pacman -S grub efibootmgr os-prober
+  # grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=arch_grub
+  # grub-mkconfig -o /boot/grub/grub.cfg
 
 
 
