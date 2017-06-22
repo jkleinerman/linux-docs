@@ -282,10 +282,10 @@ Create the following file ``/etc/systemd/network/wlp2s0.network`` assuming your 
 .. code-block::
 
   [Match]
-  Name=wlan0
+  Name=wlp2s0
   
   [Network]
-  Address=10.10.7.71/24
+  DHCP=ipv4
   
 
 
