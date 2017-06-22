@@ -168,16 +168,50 @@ Assuming you have an EFI motherboard, install grub in the following way:
   # grub-mkconfig -o /boot/grub/grub.cfg
   
   
+Aditional packages before rebooting your new system
+---------------------------------------------------
 
-Configure wpa_supplicant and systemd-networkd to connect to internet
---------------------------------------------------------------------
+Install the following packages before rebooting and start your new base system:
 
-Install the following packages
+
+To use wifi without the network manager:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Just install the package to have it when you reboot the system, but the configuration should be done after rebooting because there are problems when you try to run wpa_supplicant in a chrooted system:
 
 .. code-block::
 
   # pacman -S wpa_supplicant iw
+ 
+ 
+Vim editor:
+~~~~~~~~~~~
 
+.. code-block::
+
+  # pacman -S vim
+  
+  
+Bash completion:
+~~~~~~~~~~~~~~~~
+
+.. code-block::
+
+  # pacman -S bash-completion
+
+
+Reboot the system to start the base system
+------------------------------------------
+
+.. code-block::
+
+  # exit
+  # umount -R /mnt
+  # reboot
+
+
+Configure wpa_supplicant and systemd-networkd to connect to internet
+--------------------------------------------------------------------
 
 
 Configure wpa_supplicant
@@ -295,15 +329,6 @@ Start it using the following command:
 
   # systemctl start systemd-networkd
 
-
-Reboot the system to start the base system
-------------------------------------------
-
-.. code-block::
-
-  # exit
-  # umount -R /mnt
-  # reboot
 
 
 
