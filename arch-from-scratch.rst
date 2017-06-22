@@ -288,6 +288,12 @@ Create the following file ``/etc/systemd/network/wlp2s0.network`` assuming your 
   DHCP=ipv4
   
 
+Do not enable systemd-networkd at boot. Start it manually when you need it since we are going to install the netwrok manager. Use this just when you need access from the console and you don't have the network manager started.
+Start it using the following command:
+
+.. code-block::
+
+  # systemctl start systemd-networkd
 
 
 Reboot the system to start the base system
@@ -301,7 +307,47 @@ Reboot the system to start the base system
 
 
 
+Configuring console fonts
+-------------------------
 
+Configuring GRUB fonts
+~~~~~~~~~~~~~~~~~~~~~~
+
+Edit ``/etc/default/grub`` file and set the following line:
+
+.. code-block::
+
+  # GRUB_GFX_MODE=1024x768x32
+  
+Regenerate the grub configuration running:
+
+.. code-block::
+
+  # grub-mkconfig -o /boot/grub/grub.cfg
+
+
+
+Configuring vconsole fonts:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Install the package ``terminus-font``:
+
+.. code-block::
+
+  # pacman -S terminus-font
+  
+Set the desired font using ``setfont`` command, you can see the available fonts in ``/usr/share/kbd/consolefonts/``
+
+.. code-block::
+
+  # setfont ter-v32b
+  
+Make this permanent setting it in the file ``/etc/vconsole.conf``
+
+.. code-block::
+
+  FONT=ter-v32b
+  FONT_MAP=8859-2
 
 
 
