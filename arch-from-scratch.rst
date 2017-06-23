@@ -422,6 +422,13 @@ Uncomment the following line of ``sudoers`` files using ``visudo`` command
 
   %wheel ALL=(ALL) NOPASSWD: ALL
 
+
+Base-devel
+----------
+
+Install ``base-devel`` in order to use the **Arch User Repository**
+
+
 Install Graphical Environment (Gnome)
 -------------------------------------
 
