@@ -191,7 +191,7 @@ Vim editor:
 
   # pacman -S vim
   
-Make ``vi`` command call ``vim`` editor
+Make ``vi`` command call ``vim`` editor. This is neccesary for some commands like ``visudo``
  
 .. code-block::
 
