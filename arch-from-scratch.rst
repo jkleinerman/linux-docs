@@ -191,6 +191,30 @@ Vim editor:
 
   # pacman -S vim
   
+Make ``vi`` command call ``vim`` editor
+ 
+.. code-block::
+
+  # rm /usr/bin/vi
+  # ln -s /usr/bin/vim /usr/bin/vi
+  
+
+Vim configuration file
+
+.. code-block::
+  
+  # cp /usr/share/vim/vim80/vimrc_example.vim /etc/vimrc
+	
+To the previous file, add the following:
+
+.. code-block::
+
+  set tabstop=4
+  set shiftwidth=4
+  set expandtab
+  set nobackup
+  
+  
   
 Bash completion:
 ~~~~~~~~~~~~~~~~
@@ -375,4 +399,28 @@ Make this permanent setting it in the file ``/etc/vconsole.conf``
   FONT_MAP=8859-2
 
 
+Create your user
+----------------
+
+.. code-block::
+
+  # useradd -m -s /bin/bash -c "Jorge Kleinerman" jkleinerman
+  # passwd jkleinerman
+  
+
+Sudo for your user
+------------------
+
+.. code-block::
+
+  # pacman -S sudo
+  # usermod -aG wheel jkleinerman
+  
+Uncomment the following line of ``sudoers`` files using ``visudo`` command
+
+.. code-block::
+
+  %wheel ALL=(ALL) NOPASSWD: ALL
+
+  
 
