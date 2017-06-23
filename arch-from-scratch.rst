@@ -5,7 +5,7 @@ Installing Arch From Scratch
 
 
 Booting from a pen drive
--------------------------
+------------------------
 
 Create the bootable pendrive with the following command
 
@@ -422,5 +422,44 @@ Uncomment the following line of ``sudoers`` files using ``visudo`` command
 
   %wheel ALL=(ALL) NOPASSWD: ALL
 
+Install Graphical Environment (Gnome)
+-------------------------------------
+
+1) Install ``gnome`` package
+
+.. code-block::
+
+  # pacman -S gnome
+  
+And select default options (hit Enter key 3 times)
+
+2) Enable GDM:
+
+.. code-block::
+
+  # systemctl enable gdm.service
+  # systemctl start gdm.service
+  
+3) Enable NetworkManager:
+
+.. code-block::
+
+  # systemctl enable NetworkManager.service
+  # systemctl start NetworkManager.service
+  
+4) Set Enable NTP:
+
+.. code-block::
+
+   # timedatectl set-ntp true
+
+5) Set Bluetooth:
+
+Install the ``bluez`` and ``bluez-utils`` packages. The bluez package provides the Bluetooth protocol
+stack, and the bluez-utils package provides the bluetoothctl utility.
+
+Then start the ``bluetooth.service`` systemd unit. You can enable it to start automatically at boot time.
+
+6) Install a good browser like Firefox or/and Google-Chrome
   
 
