@@ -494,8 +494,9 @@ And select default options (hit Enter key 3 times)
 
 Install the ``bluez`` and ``bluez-utils`` packages. The bluez package provides the Bluetooth protocol
 stack, and the bluez-utils package provides the bluetoothctl utility.
+(``bluez`` is already installed and ``bluez-utils`` is not needed)
 
-Then start the ``bluetooth.service`` systemd unit. You can enable it to start automatically at boot time.
+Start the ``bluetooth.service`` systemd unit. You can enable it to start automatically at boot time doing ``systemctl enable bluetooth.service``
 
 6) Install a good browser like Firefox or/and Google-Chrome
   
