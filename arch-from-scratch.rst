@@ -352,7 +352,37 @@ Start it using the following command:
 .. code-block::
 
   # systemctl start systemd-networkd
+  
+Each time you want to connect to internet without network manager, you should start the following units:
 
+.. code-block::
+
+  # systemctl start wpa_supplicant@wlp2s0
+  # systemctl start systemd-networkd
+  # systemctl start systemd-resolvd
+
+
+SSH Server
+----------
+
+.. code-block::
+
+  # pacman -S openssh
+  
+Edit ``/etc/ssh/sshd_config`` and uncomment ``UseDNS no``
+
+Start the service manually when you need it or enable it at startup using
+
+.. code-block::
+
+  # systemctl start sshd
+
+
+
+Mirror List
+-----------
+
+Generate a good ``/etc/pacman.d/mirrorlist`` using the online generator at: https://www.archlinux.org/mirrorlist/
 
 
 
