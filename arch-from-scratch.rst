@@ -264,6 +264,8 @@ Fine tunning of bashrc
 
 .. code-block::
   
+  PS1='\[\e[1;31m\][\u@\h \W]\$\[\e[0m\] '
+  
   [ -r /etc/DIR_COLORS ] && eval `dircolors /etc/DIR_COLORS`
   
   alias ls='ls --color=auto'
