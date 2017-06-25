@@ -241,6 +241,24 @@ Reboot the system to start the base system
   # reboot
 
 
+Fine tunning of bashrc
+----------------------
+
+- Install **Bash Completion** package
+
+.. code-block::
+
+  # pacman -S bash-completion
+  
+
+- Install **Colordiff** package
+
+.. code-block::
+
+  # pacman -S colordiff
+  
+
+
 Configure wpa_supplicant and systemd-networkd to connect to internet
 --------------------------------------------------------------------
 
