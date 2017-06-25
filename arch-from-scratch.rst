@@ -214,7 +214,7 @@ To the previous file, add the following:
   set expandtab
   set nobackup
   
-To be able to paste text using the medium button of the mouse in a gnome-terminal, edit `/usr/share/vim/vim80/defaults.vim` and comment out the following lines:
+To be able to paste text using the medium button of the mouse in a gnome-terminal, edit ``/usr/share/vim/vim80/defaults.vim`` and comment out the following lines:
 
 .. code-block::
 
