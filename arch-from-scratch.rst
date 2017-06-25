@@ -222,7 +222,7 @@ To be able to paste text using the medium button of the mouse in a gnome-termina
   "  set mouse=a
   "endif
 
-  
+
 
 Reboot the system to start the base system
 ------------------------------------------
@@ -232,6 +232,14 @@ Reboot the system to start the base system
   # exit
   # umount -R /mnt
   # reboot
+
+
+Set Enable NTP
+--------------
+
+.. code-block::
+
+   # timedatectl set-ntp true
 
 
 Fine tunning of bashrc
@@ -527,10 +535,13 @@ Uncomment the following line of ``sudoers`` files using ``visudo`` command
   %wheel ALL=(ALL) NOPASSWD: ALL
 
 
-Base-devel
-----------
+Development tools
+-----------------
 
-Install ``base-devel`` in order to use the **Arch User Repository**
+- Install ``base-devel`` in order to use the **Arch User Repository**
+
+- Install ``git`` in order to clone ``aurinup.sh`` script
+
 
 
 Install Graphical Environment (Gnome)
@@ -558,20 +569,35 @@ And select default options (hit Enter key 3 times)
   # systemctl enable NetworkManager.service
   # systemctl start NetworkManager.service
   
-4) Set Enable NTP:
 
-.. code-block::
-
-   # timedatectl set-ntp true
-
-5) Set Bluetooth:
-
-Install the ``bluez`` and ``bluez-utils`` packages. The bluez package provides the Bluetooth protocol
-stack, and the bluez-utils package provides the bluetoothctl utility.
-(``bluez`` is already installed and ``bluez-utils`` is not needed)
+4) Set Bluetooth:
 
 Start the ``bluetooth.service`` systemd unit. You can enable it to start automatically at boot time doing ``systemctl enable bluetooth.service``
 
-6) Install a good browser like Firefox or/and Google-Chrome
-  
 
+5) Install ``gnome-tweak-tool`` and enable **taskbar** extension.
+
+
+Google Chrome Browser
+---------------------
+
+Install google-chrome package from the AUR.
+
+.. code-block::
+
+   # ./aurinup.sh google-chrome
+
+
+Install addblocks google chrome extension
+
+
+LibreOffice
+-----------
+
+Install Libre Office package and the spelling corrector
+
+.. code-block::
+  
+  # pacman -S libreoffice-still
+  # pacman -S hunspell-es
+  # pacman -S hunspell-en_US 
