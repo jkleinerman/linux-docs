@@ -289,6 +289,22 @@ Fine tunning of bashrc
    man "$@"
   }
 
+- Do the same for each user of your laptop
+
+.. code-block::
+
+  # cd /root
+  # cp .bashrc .bash_profile /home/jkleinerman/
+  # chown jkleinerman:jkleinerman /home/jkleinerman/.bashrc 
+  # chown jkleinerman:jkleinerman /home/jkleinerman/.bash_profile
+  
+- Change the color of the normal users prompt
+
+.. code-block::
+
+  PS1='\[\e[1;32m\][\u@\h \W]\$\[\e[0m\] '
+  
+
 
 Configure wpa_supplicant and systemd-networkd to connect to internet
 --------------------------------------------------------------------
