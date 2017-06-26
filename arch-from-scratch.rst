@@ -601,3 +601,20 @@ Install Libre Office package and the spelling corrector
   # pacman -S libreoffice-still
   # pacman -S hunspell-es
   # pacman -S hunspell-en_US 
+
+
+Tuning
+------
+
+Set the lock screen delay:
+
+.. code-block::
+
+  # By default it is 1 minute. Set delay time to 5 minutes
+  $ gsettings get org.gnome.desktop.session idle-delay
+  uint32 60
+  $ gsettings set org.gnome.desktop.session idle-delay 300
+
+Dropbox:
+
+Install from AUR ``dropbox`` and ``nautilus-dropbox``. The last one is for Nautilus integration
