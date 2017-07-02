@@ -618,3 +618,7 @@ Set the lock screen delay:
 Dropbox:
 
 Install from AUR ``dropbox`` and ``nautilus-dropbox``. The last one is for Nautilus integration
+
+Keyboard Accents:
+
+Go to **Settings**, **Region & Language** and add **English (US, intl., with dead keys)** to **Input Sources**
