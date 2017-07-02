@@ -542,6 +542,13 @@ Development tools
 
 - Install ``git`` in order to clone ``aurinup.sh`` script
 
+- If you don't have python interpreter installed yet install ``python`` package
+
+- Install ``python-virtaulevn`` package
+
+- Install ``python-pip`` package
+
+
 
 
 Install Graphical Environment (Gnome)
