@@ -629,3 +629,8 @@ Install from AUR ``dropbox`` and ``nautilus-dropbox``. The last one is for Nauti
 Keyboard Accents:
 
 Go to **Settings**, **Region & Language** and add **English (US, intl., with dead keys)** to **Input Sources**
+
+Enable Desktop Icons and Right click:
+
+Install ``dconf-editor`` package and run dconf-editor app.
+Then go to ``org > gnome > desktop > background`` and turn on the button to show desktop icons
