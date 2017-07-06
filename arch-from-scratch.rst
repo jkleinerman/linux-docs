@@ -632,5 +632,6 @@ Go to **Settings**, **Region & Language** and add **English (US, intl., with dea
 
 Enable Desktop Icons and Right click:
 
-Install ``dconf-editor`` package and run dconf-editor app.
-Then go to ``org > gnome > desktop > background`` and turn on the button to show desktop icons
+.. code-block::
+
+  $ gsettings set org.gnome.desktop.background show-desktop-icons true
