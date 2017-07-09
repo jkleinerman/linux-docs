@@ -429,7 +429,7 @@ Create the following file ``/etc/systemd/network/wlp2s0.network`` assuming your 
   
 
 **systemd-resolved** is required only if you are specifying DNS entries in .network files or if you want to obtain DNS addresses from networkd's DHCP client. Alternatively you may manually manage /etc/resolv.conf.
-If you are going to use it delete or rename the existing file and create the following symbolic link:
+If you are going to use it, delete or rename the existing file `/etc/resolv.conf` and create the following symbolic link:
 
 .. code-block::
 
