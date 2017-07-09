@@ -316,8 +316,8 @@ Fine tunning of bashrc
   
 
 
-Configure wpa_supplicant and systemd-networkd to connect to internet
---------------------------------------------------------------------
+Configure wpa_supplicant, systemd-networkd and systemd-resolvd to connect to internet
+-------------------------------------------------------------------------------------
 
 
 Configure wpa_supplicant
@@ -428,12 +428,15 @@ Create the following file ``/etc/systemd/network/wlp2s0.network`` assuming your 
   DHCP=ipv4
   
 
-Do not enable systemd-networkd at boot. Start it manually when you need it since we are going to install the netwrok manager. Use this just when you need access from the console and you don't have the network manager started.
-Start it using the following command:
+**systemd-resolved** is required only if you are specifying DNS entries in .network files or if you want to obtain DNS addresses from networkd's DHCP client. Alternatively you may manually manage /etc/resolv.conf.
+If you are going to use it delete or rename the existing file and create the following symbolic link:
 
 .. code-block::
 
-  # systemctl start systemd-networkd
+  # ln -s /run/systemd/resolve/resolv.conf /etc/resolv.conf
+  
+
+Do not enable systemd-networkd neither systemd-resolved at boot. Start it manually when you need them since we are going to install netwrok manager. Use them just when you need internet access from the console and you don't have the network manager started.
   
 Each time you want to connect to internet without network manager, you should start the following units:
 
