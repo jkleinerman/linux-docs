@@ -631,10 +631,18 @@ Install from AUR ``dropbox`` and ``nautilus-dropbox``. The last one is for Nauti
 
 Keyboard Accents:
 
-Go to **Settings**, **Region & Language** and add **English (US, intl., with dead keys)** to **Input Sources**
+Go to **Settings**, **Region & Language** and add **English (intl., with dead keys)** to **Input Sources**
+Take into account that there is another layout wich name is **English (US intl., with dead keys)**. Only the first one should be selected.
 
 Enable Desktop Icons and Right click:
 
 .. code-block::
 
   $ gsettings set org.gnome.desktop.background show-desktop-icons true
+  
+  
+Enable H.264 for Gnome Videos:
+
+.. code-block::
+
+   # pacman -S gst-libav
