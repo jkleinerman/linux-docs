@@ -66,13 +66,13 @@ Activate the swap partition:
 Install the base packages in your hard drive
 --------------------------------------------
 
-
 Mount the partition that would be used for root filesystem in ``/mnt``:
 
 .. code-block::
 
   # mount /dev/sda2 /mnt
 
+Select a good Server for the mirrorlist file ``/etc/pacman.d/mirrorlist``
 
 Install the base packages:
 
