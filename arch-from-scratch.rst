@@ -562,7 +562,7 @@ Install Graphical Environment (Gnome)
 .. code-block::
 
   # pacman -S gnome
-  
+
 And select default options (hit Enter key 3 times)
 
 2) Enable GDM:
@@ -587,6 +587,11 @@ Start the ``bluetooth.service`` systemd unit. You can enable it to start automat
 
 5) Install ``gnome-tweak-tool`` and enable **taskbar** extension.
 
+6) Install better fonts
+
+.. code-block::
+
+  $ sudo pacman -S ttf-dejavu
 
 Google Chrome Browser
 ---------------------
