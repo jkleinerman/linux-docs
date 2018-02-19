@@ -263,7 +263,7 @@ Fine tunning of bashrc
   
 .. code-block::
 
-  # colordiff -p > /etc/DIR_COLORS
+  # dircolors -p > /etc/DIR_COLORS
 
 
 - Copy ``/etc/skel/.bash_profile`` and ``/etc/skel/.bashrc`` to ``/root`` directory
