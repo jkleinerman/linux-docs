@@ -642,7 +642,7 @@ Install from AUR ``dropbox`` and ``nautilus-dropbox``. The last one is for Nauti
 
 Keyboard Accents:
 
-Go to **Settings**, **Region & Language** and add **English (intl., with AktGr dead keys)** to **Input Sources**.  
+Go to **Settings**, **Region & Language** and add **English (intl., with AltGr dead keys)** to **Input Sources**.  
 
 Take into account that there is another layout which name is **English (US intl., with dead keys)**. Only the first one should be selected.
 
@@ -658,3 +658,13 @@ Enable H.264 for Gnome Videos:
 .. code-block::
 
    # pacman -S gst-libav
+   
+Cups
+----
+.. code-block::
+
+  # pacman -S cups
+  # pacman enalbe cups-browsed.service
+  # pacman start cups-browsed.service
+  
+Install the necessary driver if need it and configure cups in the url: localhost:631
