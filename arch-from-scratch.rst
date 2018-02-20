@@ -551,8 +551,22 @@ Development tools
 
 - Install ``python-pip`` package
 
+- Install ``ipython`` package
 
+- Install ``docker`` package
 
+.. code-block::
+
+  # pacman -S docker
+  # usermod -aG docker jkleinerman
+  
+- Install ``docker-compose``
+
+- Install ``retext``
+
+.. code-block::
+
+  # pacman -S retext python-docutils
 
 Install Graphical Environment (Gnome)
 -------------------------------------
