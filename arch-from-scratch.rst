@@ -682,3 +682,19 @@ Cups
   # pacman start cups-browsed.service
   
 Install the necessary driver if need it and configure cups in the url: localhost:631
+
+
+Wrting on NTFS filesystems
+--------------------------
+
+.. code-block::
+
+  # pacman -S ntfs-3g
+  
+  
+Multimedia Software
+-------------------
+
+.. code-block::
+
+  # pacman -S inkscape 
