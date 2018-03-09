@@ -697,4 +697,15 @@ Multimedia Software
 
 .. code-block::
 
-  # pacman -S inkscape 
+  # pacman -S inkscape
+  
+Nautilus
+--------
+
+To sort directories before files do:
+
+.. code-block::
+
+  # pacman -S dconf-editor
+  
+Execute it and go to: ``org/gtk/settings/file-chooser/`` and enable ``sort-directories-first``
