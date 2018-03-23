@@ -598,9 +598,13 @@ And select default options (hit Enter key 3 times)
 
 Start the ``bluetooth.service`` systemd unit. You can enable it to start automatically at boot time doing ``systemctl enable bluetooth.service``
 
-5) Using the default gnome browser, go to extensions.gnome.org and enable **taskbar** extension by **zpydr**
+5) Using the default gnome browser, go to extensions.gnome.org and download the following extensions
 
-6) Install ``gnome-tweak-tool`` and enable **taskbar** extension.
+|   - **taskbar** by **zpydr**
+|   - **transparent top bar**
+|   - **dash to dock**
+
+6) Install ``gnome-tweak-tool`` and manage the above extensions.
 
 7) Install better fonts
 
@@ -709,3 +713,13 @@ To sort directories before files do:
   # pacman -S dconf-editor
   
 Execute it and go to: ``org/gtk/settings/file-chooser/`` and enable ``sort-directories-first``
+
+
+MySQLdb
+-------
+
+.. code-block::
+
+  # pacman -S mariadb-clients
+  # pip install mysqlclient
+
