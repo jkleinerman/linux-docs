@@ -567,6 +567,13 @@ Development tools
 
 - Install ``retext``
 
+In the last upgrade of Arch, to start ``retext`` the ``python-markdown-math`` was need to run ``retext``. As it is not as arch package, it should be installed via pip
+
+.. code-block::
+
+  # pip install python-markdown-math
+
+
 .. code-block::
 
   # pacman -S retext python-docutils
