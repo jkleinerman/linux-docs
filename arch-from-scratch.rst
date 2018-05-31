@@ -626,6 +626,19 @@ Start the ``bluetooth.service`` systemd unit. You can enable it to start automat
 
 9) Install ``Firefox``
 
+10) Install Hard Graphics Aceleration
+
+.. code-block::
+
+  # pacman -S libva-utils
+  # pacman -S libva-intel-driver
+
+Check before and after with
+
+.. code-block::
+
+  # vainfo
+
 
 Google Chrome Browser
 ---------------------
