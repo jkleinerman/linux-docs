@@ -626,7 +626,7 @@ Start the ``bluetooth.service`` systemd unit. You can enable it to start automat
 
 9) Install ``Firefox``
 
-10) Install Hard Graphics Aceleration
+10) Install Hardware Graphics Aceleration
 
 .. code-block::
 
