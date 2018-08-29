@@ -719,12 +719,21 @@ Wrting on NTFS filesystems
   # pacman -S ntfs-3g
   
   
-Multimedia Software
--------------------
+Vector Image Editor (like Corel Draw)
+-------------------------------------
 
 .. code-block::
 
   # pacman -S inkscape
+  
+    
+Bitmatp Image Editor (like MSPaint)
+-------------------------------------
+
+.. code-block::
+
+  # pacman -S mtpaint
+
   
 Nautilus
 --------
@@ -745,4 +754,22 @@ MySQLdb
 
   # pacman -S mariadb-clients
   # pip install mysqlclient
+
+
+VirtualBox
+----------
+
+.. code-block::
+
+  # pacman -S virtualbox
+
+Choose de default package to provide host modules: **virtualbox-host-dkms** (option 1)
+
+Install linux headers:
+
+.. code-block::
+
+  # pacman -S linux-headers
+  
+Reboot the maching
 
