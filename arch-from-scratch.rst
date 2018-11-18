@@ -237,6 +237,19 @@ Reboot the system to start the base system
   # reboot
 
 
+
+Install Intel Processor release stability and security updates to the processor microcode
+-----------------------------------------------------------------------------------------
+
+This avoid the error you will see during boot time: "[Firmware Bug]: TSC_DEADLINE disabled due to Errata"
+
+.. code-block::
+
+  # pacman -S intel-ucode
+  # grub-mkconfig -o /boot/grub/grub.cfg
+  # reboot
+
+
 Set Enable NTP
 --------------
 
