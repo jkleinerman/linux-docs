@@ -723,7 +723,8 @@ To manage Gnome Extensions from Google Chrome, install the following package:
 .. code-block::
 
   # pacman -S chrome-gnome-shell
-
+  
+Enable this extension in Google Chrome Extensions section
 
 LibreOffice
 -----------
