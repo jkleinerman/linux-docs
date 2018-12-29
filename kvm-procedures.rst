@@ -13,8 +13,8 @@ In the host do:
   # qemu-nbd -c /dev/nbd0 image.img
   # fdisk /dev/nbd0
 
-Delete de partition a regenerate with the new size.
-Once done the above, delete the ``nbd0`` device
+|Delete de partition a regenerate with the new size.
+|Once done the above, delete the ``nbd0`` device
 
 .. code-block::
 
