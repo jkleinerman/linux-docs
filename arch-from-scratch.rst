@@ -642,6 +642,33 @@ Power off the bluetooth:
 
 ``[bluetooth] # power off``
 
+Power on the bluetooth, then enable the pairing method on the mouse if needed"
+
+``[bluetooth] # power on``
+
+List the available bluetooth devices, you have to copy the mouse device ID XX:XX:XX:XX:XX:XX:
+
+``[bluetooth] # scan on``
+
+Unpair the device if already paired:
+
+``[bluetooth] # remove XX:XX:XX:XX:XX:XX``
+
+Pair the mouse with the computer:
+
+``[bluetooth] # pair XX:XX:XX:XX:XX:XX``
+
+Connect the computer with the mouse:
+
+``[bluetooth] # connect XX:XX:XX:XX:XX:XX``
+
+Unblock the device control:
+
+``[M585/M590] # unblock``
+
+Power the bluetooth off and on.
+
+If the mouse does not work directly, just power off and power on the mouse.
 
   
 
