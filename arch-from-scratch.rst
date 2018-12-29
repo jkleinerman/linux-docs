@@ -677,6 +677,7 @@ If the mouse does not work directly, just power off and power on the mouse.
 
 |   - **dash to Panel**  
 |   - **transparent top bar**
+|
 
 
 6) Install ``gnome-tweak-tool`` and manage the above extensions.
@@ -716,6 +717,12 @@ Install google-chrome package from the AUR.
 
 
 Install addblocks google chrome extension
+
+To manage Gnome Extensions from Google Chrome, install the following package:
+
+.. code-block::
+
+  # pacman -S chrome-gnome-shell
 
 
 LibreOffice
