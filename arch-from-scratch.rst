@@ -621,6 +621,31 @@ And select default options (hit Enter key 3 times)
 
 Start the ``bluetooth.service`` systemd unit. You can enable it to start automatically at boot time doing ``systemctl enable bluetooth.service``
 
+  
+To connect the mouse automatically at boot time. It is better to pair it with ``bluetoothctl`` console application instead of using the GUI of gnome. ``bluetoothctl`` is in ``bluez-utils`` package.
+
+Install the following pacakges:
+
+.. code-block::
+
+  # pacman -S bluez 
+  # pacman -S bluez-utils
+  
+
+Run the ``bluetoothctl`` in a terminal:
+
+.. code-block::
+
+  # bluetoothctl
+  
+Power off the bluetooth:
+
+``[bluetooth] # power off``
+
+
+  
+
+
 5) Using the default gnome browser, go to extensions.gnome.org and download the following extensions
 
 |   - **taskbar** by **zpydr**
