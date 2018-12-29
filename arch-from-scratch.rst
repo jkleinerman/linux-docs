@@ -675,9 +675,9 @@ If the mouse does not work directly, just power off and power on the mouse.
 
 5) Using the default gnome browser, go to extensions.gnome.org and download the following extensions
 
-|   - **taskbar** by **zpydr**
+|   - **dash to Panel**  
 |   - **transparent top bar**
-|   - **dash to dock**
+
 
 6) Install ``gnome-tweak-tool`` and manage the above extensions.
 
