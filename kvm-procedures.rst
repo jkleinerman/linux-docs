@@ -15,10 +15,12 @@ In the host do:
 
 Delete de partition a regenerate with the new size
 
+.. code-block::
+
   # qemu-nbd -d /dev/nbd0
 
 Start the machine and once inside, do:
 
-  .. code-block::
+.. code-block::
 
   # resize2fs /dev/vda1
