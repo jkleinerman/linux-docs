@@ -81,12 +81,12 @@ Install the base packages:
   # pacstrap /mnt base
 
 
-Mount the EFI partition in ``/mnt/boot/efi``:
+Mount the EFI partition in ``/mnt/efi``:
 
 .. code-block::
 
-  # mkdir -p /mnt/boot/efi
-  # mount /dev/sda1 /mnt/boot/efi
+  # mkdir -p /mnt/efi
+  # mount /dev/sda1 /mnt/efi
 
 
 Generate the fstab file and check the resulting file:
@@ -143,8 +143,8 @@ Consider adding a matching entry to ``/etc/hosts``:
 
 .. code-block::
 
-  127.0.0.1	localhost.localdomain	localhost
-  ::1		localhost.localdomain	localhost
+  127.0.0.1	localhost
+  ::1		localhost
   127.0.1.1	myhostname.localdomain	myhostname
   
   
@@ -164,7 +164,7 @@ Assuming you have an EFI motherboard, install grub in the following way:
 .. code-block::
 
   # pacman -S grub efibootmgr os-prober
-  # grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=arch_grub
+  # grub-install --target=x86_64-efi --efi-directory=/efi --bootloader-id=arch_grub
   # grub-mkconfig -o /boot/grub/grub.cfg
   
   
