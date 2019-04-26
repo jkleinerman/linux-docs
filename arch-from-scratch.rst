@@ -616,65 +616,12 @@ And select default options (hit Enter key 3 times)
   # systemctl enable NetworkManager.service
   # systemctl start NetworkManager.service
   
-
-4) Set a Bluetooth mouse:
-
-Start the ``bluetooth.service`` systemd unit. You can enable it to start automatically at boot time doing ``systemctl enable bluetooth.service``
-
-  
-To connect the mouse automatically at boot time. It is better to pair it with ``bluetoothctl`` console application instead of using the GUI of gnome. ``bluetoothctl`` is in ``bluez-utils`` package.
-
-Install the following pacakges:
-
-.. code-block::
-
-  # pacman -S bluez 
-  # pacman -S bluez-utils
-  
-
-Run the ``bluetoothctl`` in a terminal:
-
-.. code-block::
-
-  # bluetoothctl
-  
-Power off the bluetooth:
-
-``[bluetooth] # power off``
-
-Power on the bluetooth, then enable the pairing method on the mouse if needed"
-
-``[bluetooth] # power on``
-
-List the available bluetooth devices, you have to copy the mouse device ID XX:XX:XX:XX:XX:XX:
-
-``[bluetooth] # scan on``
-
-Unpair the device if already paired:
-
-``[bluetooth] # remove XX:XX:XX:XX:XX:XX``
-
-Pair the mouse with the computer:
-
-``[bluetooth] # pair XX:XX:XX:XX:XX:XX``
-
-Connect the computer with the mouse:
-
-``[bluetooth] # connect XX:XX:XX:XX:XX:XX``
-
-Unblock the device control:
-
-``[M585/M590] # unblock``
-
-Power the bluetooth off and on.
-
-If the mouse does not work directly, just power off and power on the mouse.
-
+4) 
   
 5) Install from the AUR, the following Gnome extensions:
 
-  - gnome-shell-extension-dash-to-panel-git (you can use this extension for transparent bar as well)
-  - gnome-shell-extension-appindicator (for system try icons like dropbox, zoom, etc)
+- ``gnome-shell-extension-dash-to-panel-git`` (you can use this extension for transparent bar as well)
+- ``gnome-shell-extension-appindicator`` (for system try icons like Dropbox, Zoom, etc)
 
 6) Install ``gnome-tweak-tool`` and manage the above extensions.
 
@@ -701,6 +648,7 @@ Check before and after with
 
   # vainfo
 
+11) Install ``keepassxc``
 
 Google Chrome Browser
 ---------------------
@@ -710,7 +658,6 @@ Install google-chrome package from the AUR.
 .. code-block::
 
    # ./aurinup.sh google-chrome
-
 
 Install addblocks google chrome extension
 
@@ -842,3 +789,75 @@ Install linux headers:
   
 Reboot the maching
 
+Troubleshooting commond issues
+------------------------------
+
+Bluethooth mouse
+++++++++++++++++
+
+Some mouses need to be set from console:
+
+Start the ``bluetooth.service`` systemd unit. You can enable it to start automatically at boot time doing ``systemctl enable bluetooth.service``
+
+To connect the mouse automatically at boot time. It is better to pair it with ``bluetoothctl`` console application instead of using the GUI of gnome. ``bluetoothctl`` is in ``bluez-utils`` package.
+
+Install the following pacakges:
+
+.. code-block::
+
+  # pacman -S bluez 
+  # pacman -S bluez-utils
+  
+Run the ``bluetoothctl`` in a terminal:
+
+.. code-block::
+
+  # bluetoothctl
+  
+Power off the bluetooth:
+
+``[bluetooth] # power off``
+
+Power on the bluetooth, then enable the pairing method on the mouse if needed"
+
+``[bluetooth] # power on``
+
+List the available bluetooth devices, you have to copy the mouse device ID XX:XX:XX:XX:XX:XX:
+
+``[bluetooth] # scan on``
+
+Unpair the device if already paired:
+
+``[bluetooth] # remove XX:XX:XX:XX:XX:XX``
+
+Pair the mouse with the computer:
+
+``[bluetooth] # pair XX:XX:XX:XX:XX:XX``
+
+Connect the computer with the mouse:
+
+``[bluetooth] # connect XX:XX:XX:XX:XX:XX``
+
+Unblock the device control:
+
+``[M585/M590] # unblock``
+
+Power the bluetooth off and on.
+
+If the mouse does not work directly, just power off and power on the mouse.
+
+
+Intel WiFi cards
+++++++++++++++++
+
+``iwlwifi`` is the wireless driver for Intel's current wireless chips. The firmware is included in
+the ``linux-firmware`` package. The ``linux-firmware-iwlwifi-git`` (AUR) may contain some updates sooner.
+
+If you have problems connecting to networks in general or your link quality is very poor, try to disable
+802.11n:
+
+.. code-block::
+
+  echo "options iwlwifi 11n-disable=1" > /etc/modprobe.d/iwlwifi.conf
+
+And reboot
