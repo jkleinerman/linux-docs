@@ -617,7 +617,7 @@ And select default options (hit Enter key 3 times)
   # systemctl start NetworkManager.service
   
 
-4) Set Bluetooth:
+4) Set a Bluetooth mouse:
 
 Start the ``bluetooth.service`` systemd unit. You can enable it to start automatically at boot time doing ``systemctl enable bluetooth.service``
 
@@ -671,14 +671,10 @@ Power the bluetooth off and on.
 If the mouse does not work directly, just power off and power on the mouse.
 
   
+5) Install from the AUR, the following Gnome extensions:
 
-
-5) Using the default gnome browser, go to extensions.gnome.org and download the following extensions
-
-|   - **dash to Panel**  
-|   - **transparent top bar**
-|
-
+  - gnome-shell-extension-dash-to-panel-git (you can use this extension for transparent bar as well)
+  - gnome-shell-extension-appindicator (for system try icons like dropbox, zoom, etc)
 
 6) Install ``gnome-tweak-tool`` and manage the above extensions.
 
