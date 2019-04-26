@@ -793,7 +793,7 @@ Troubleshooting commond issues
 ------------------------------
 
 Bluethooth mouse
-++++++++++++++++
+~~~~~~~~~~~~~~~~
 
 Some mouses need to be set from console:
 
@@ -848,7 +848,7 @@ If the mouse does not work directly, just power off and power on the mouse.
 
 
 Intel WiFi cards
-++++++++++++++++
+~~~~~~~~~~~~~~~~
 
 ``iwlwifi`` is the wireless driver for Intel's current wireless chips. The firmware is included in
 the ``linux-firmware`` package. The ``linux-firmware-iwlwifi-git`` (AUR) may contain some updates sooner.
