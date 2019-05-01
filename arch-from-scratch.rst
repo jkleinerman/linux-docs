@@ -621,7 +621,8 @@ And select default options (hit Enter key 3 times)
 5) Install from the AUR, the following Gnome extensions:
 
 - ``gnome-shell-extension-dash-to-panel-git`` (you can use this extension for transparent bar as well)
-- ``gnome-shell-extension-appindicator`` (for system try icons like Dropbox, Zoom, etc)
+- ``gnome-shell-extension-appindicator`` (for system try icons like Dropbox, Zoom, etc. It needs 
+``libappindicator-gtk3`` installed)
 
 6) Install ``gnome-tweak-tool`` and manage the above extensions.
 
