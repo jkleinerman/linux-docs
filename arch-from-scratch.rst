@@ -861,3 +861,21 @@ If you have problems connecting to networks in general or your link quality is v
   echo "options iwlwifi 11n-disable=1" > /etc/modprobe.d/iwlwifi.conf
 
 And reboot
+
+Respecting the regulatory domain
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Install ``crda`` package, edit ``/etc/wpa_supplicant/wpa_supplicant.conf`` and uncommenting the appropriate domain.
+Then reboot and check the current domain using the following command:
+
+.. code-block::
+
+  $ iw reg get
+
+The current regdomain can be set to the United States (for example) with:
+
+.. code-block::
+
+  $ sudo iw reg set US
+
+More information: https://wiki.archlinux.org/index.php/Wireless_network_configuration#Respecting_the_regulatory_domain
