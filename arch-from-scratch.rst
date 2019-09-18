@@ -288,7 +288,7 @@ Fine tunning of bashrc
 
 .. code-block::
   
-  PS1='\[\e[1;31m\][\u@\h \W]\$\[\e[0m\] '
+  PS1='\[\e[1;31m\][\u@\h \e[0;37m\]\W]\e[1;31m\]\$\[\e[0m\] '
   
   [ -r /etc/DIR_COLORS ] && eval `dircolors /etc/DIR_COLORS`
   
@@ -328,9 +328,8 @@ Fine tunning of bashrc
 
 .. code-block::
 
-  PS1='\[\e[1;32m\][\u@\h \W]\$\[\e[0m\] '
-  
-
+  PS1='\[\e[1;32m\][\u@\h \e[0;37m\]\W\e[1;32m\]]\$\[\e[0m\] '
+   
 
 Configure wpa_supplicant, systemd-networkd and systemd-resolvd to connect to internet
 -------------------------------------------------------------------------------------
