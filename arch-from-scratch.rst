@@ -788,6 +788,17 @@ Install linux headers:
   
 Reboot the maching
 
+Google Chrome dark mode
+-----------------------
+
+Copy the global ``google-chrome.desktop`` file to your local configuration directory
+
+.. code-block::
+
+  $ cp /usr/share/applications/google-chrome.desktop ~/.local/share/applications/google-chrome.desktop
+  
+Edit this file and add ``--force-dark-mode`` argument to all ``Exec=`` entries you have there.
+
 Troubleshooting commond issues
 ------------------------------
 
