@@ -78,7 +78,7 @@ Install the base packages:
 
 .. code-block::
 
-  # pacstrap /mnt base
+  # pacstrap /mnt base linux linux-firmware
 
 
 Mount the EFI partition in ``/mnt/efi``:
