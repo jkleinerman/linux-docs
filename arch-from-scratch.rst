@@ -562,7 +562,7 @@ Development tools
 
 - If you don't have python interpreter installed yet install ``python`` package
 
-- Install ``python-virtaulevn`` package
+- Install ``python-virtualenv`` package
 
 - Install ``python-pip`` package
 
