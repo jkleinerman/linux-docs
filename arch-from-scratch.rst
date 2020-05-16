@@ -790,14 +790,8 @@ VirtualBox
 
   # pacman -S virtualbox
 
-Choose de default package to provide host modules: **virtualbox-host-dkms** (option 1)
+You will need to choose a package to provide host modules. Choose **virtualbox-host-modules-arch**
 
-Install linux headers:
-
-.. code-block::
-
-  # pacman -S linux-headers
-  
 Reboot the maching
 
 Google Chrome dark mode
