@@ -615,8 +615,20 @@ And select default options (hit Enter key 3 times)
   # systemctl enable NetworkManager.service
   # systemctl start NetworkManager.service
   
-4) 
-  
+4) Enable ``systemd-resolved.service`` to work with NetworkManager
+
+.. code-block::
+
+  sudo rm /etc/resolv.conf
+  sudo systemctl enable systemd-resolved.service
+  sudo systemctl reboot
+
+After rebooting, verify if ``/etc/resolv.conf`` is a symlink to ``/run/systemd/resolve/stub-resolv.conf``. Otherwise create it with:
+
+.. code-block::
+
+  ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
+
 5) Install from the AUR, the following Gnome extensions:
 
 - ``gnome-shell-extension-dash-to-panel-git`` (you can use this extension for transparent bar as well)
