@@ -798,7 +798,28 @@ Install linux headers:
 
   # pacman -S linux-headers
   
-Reboot the maching
+Reboot the system.
+
+Manage virtual machines with virt-manager
+-----------------------------------------
+The virt-manager application is a desktop user interface for managing virtual machines
+through libvirt. It primarily targets KVM VMs
+
+.. code-block::
+
+  # pacman -S qemu dnsmasq virt-manager ebtables dmidecode
+  # gpasswd -a <your-username> libvirt
+
+``qemu`` may already be installed on the system.
+
+Every time you want to use virt-manager, start ``libvirtd`` service, or if you prefer
+enable it at boot.
+
+.. code-block::
+
+  # systemctl start libvirtd
+  
+Note: do not start/enable ``dnsmasq`` service.
 
 Google Chrome dark mode
 -----------------------
