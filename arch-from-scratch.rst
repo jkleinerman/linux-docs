@@ -821,6 +821,11 @@ enable it at boot.
   
 Note: do not start/enable ``dnsmasq`` service.
 
+Colored Pacman output
+---------------------
+
+Uncomment the ``Color`` line in ``/etc/pacman.conf``
+
 Google Chrome dark mode
 -----------------------
 
