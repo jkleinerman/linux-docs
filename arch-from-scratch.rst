@@ -225,7 +225,11 @@ To be able to paste text using the medium button of the mouse in a gnome-termina
   "  set mouse=a
   "endif
 
+The following VIM packages can also help:
 
+.. code-block::
+
+  # pacman -S vim-ansible
 
 Reboot the system to start the base system
 ------------------------------------------
