@@ -676,6 +676,8 @@ Install google-chrome package from the AUR.
 
 Install addblocks google chrome extension
 
+Install ``ttf-liberation`` ➜ "google-chrome optionally requires ttf-liberation: fix fonts for some PDFs - CRBug #369991"
+
 To manage Gnome Extensions from Google Chrome, install the following package:
 
 .. code-block::
