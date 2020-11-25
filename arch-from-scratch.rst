@@ -843,6 +843,11 @@ Copy the global ``google-chrome.desktop`` file to your local configuration direc
   
 Edit this file and add ``--force-dark-mode`` argument to all ``Exec=`` entries you have there.
 
+Emojis on the console
+----------------------
+
+Just install this package ``noto-fonts-emoji`` (from Google)
+
 Troubleshooting commond issues
 ------------------------------
 
