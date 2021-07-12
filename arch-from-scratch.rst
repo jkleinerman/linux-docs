@@ -940,7 +940,7 @@ The current regdomain can be set to the United States (for example) with:
 More information: https://wiki.archlinux.org/index.php/Wireless_network_configuration#Respecting_the_regulatory_domain
 
 Nerd Fonts
-~~~~~~~~~~
+----------
 
 Nerd Fonts adds icons to your fonts. Just install ``nerd-fonts-dejavu-complete`` package from AUR and
 configure your terminal to use ``DejaVuSansMono Nerd Font Mono``.
