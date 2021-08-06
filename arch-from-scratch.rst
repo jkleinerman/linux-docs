@@ -944,3 +944,31 @@ Nerd Fonts
 
 Nerd Fonts adds icons to your fonts. Just install ``nerd-fonts-dejavu-complete`` package from AUR and
 configure your terminal to use ``DejaVuSansMono Nerd Font Mono``.
+
+Pipewire
+--------
+
+Pipewire is a new low-level multimedia framework. It aims to offer capture and playback for both audio and video with minimal
+latency and support for PulseAudio, JACK, ALSA and GStreamer-based applications. It replaces PlulseAudio. I'm not sure if a new
+Gnome fresh install comes with it. You can check it with
+
+.. code-block::
+
+  $ pactl info
+  
+If it says ``Server Name: PulseAudio (on PipeWire 0.3.32)`` it means it's already installed.
+
+Install Pipewire
+~~~~~~~~~~~~~~~~
+
+Install ``pipewire`` package and also install ``pipewire-alsa``, ``pipewire-jack``, ``pipewire-media-session``,``pipewire-pulse``.
+
+.. code-block::
+
+  $ sudo pacman -S pipewire pipewire-{alsa,jack,media-session,pulse}
+  
+Reboot and check with ``pactl info``
+
+``pipewire-pulse`` will replace ``pulseaudio`` and ``pulseaudio-bluetooth``.
+
+Execute ``systemctl status --user pipewire-pulse.service`` to see the effect
