@@ -1,4 +1,3 @@
-
 Enlarge an Image in KVM
 -----------------------
 
